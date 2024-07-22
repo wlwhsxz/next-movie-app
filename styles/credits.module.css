@@ -1,0 +1,21 @@
+.container {
+}
+
+.creditList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 50px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.credit {
+  place-self: center;
+}
+
+.creditImage {
+  border-radius: 10px;
+}
+
+.creditInfo {
+}

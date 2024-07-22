@@ -11,19 +11,23 @@ export default async function MovieProduction({
 
   return (
     <div className={styles.container}>
-      <h1>Movie Production</h1>
-      {movie.production_companies.map((company: any) => (
-        <div>
-          <p key={company.id}>{company.name}</p>
-          <img src={company.logo_path} alt={company.name} />
-          <p>{company.origin_country}</p>
-        </div>
-      ))}
-      <br />
-      <div>release: {movie.release_date}</div>
-      <div>budget: {movie.budget.toLocaleString()} $</div>
-      <div>revenue: {movie.revenue.toLocaleString()} $</div>
-      <div>added value: x {(movie.revenue / movie.budget).toFixed(1)}</div>
+      <div className={styles.companyList}>
+        {movie.production_companies.map((company: any) => (
+          <div key={company.id} className={styles.company}>
+            <img
+              src={company.logo_path}
+              alt={company.name}
+              className={styles.companyLogo}
+            />
+          </div>
+        ))}
+      </div>
+      <div className={styles.movieInfo}>
+        <p>release: {movie.release_date}</p>
+        <p>budget: {movie.budget.toLocaleString()} $</p>
+        <p>revenue: {movie.revenue.toLocaleString()} $</p>
+        <p>added value: x {(movie.revenue / movie.budget).toFixed(1)}</p>
+      </div>
     </div>
   );
 }

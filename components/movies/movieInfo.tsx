@@ -19,6 +19,7 @@ export default async function MovieInfo({ id }: { id: string }) {
         <h2 className={styles.tagline}>{movie.tagline}</h2>
         <p>{movie.overview}</p>
         <Link href={`/movies/${id}/production`}>Production →</Link>
+        <Link href={`/movies/${id}/credits`}>Credits →</Link>
       </div>
     </div>
   );
