@@ -1,7 +1,7 @@
 import Movie from "@/components/movies/movie";
 import styles from "@/styles/home.module.css";
 
-export const metadata = {
+const metadata = {
   title: "Home",
 };
 
